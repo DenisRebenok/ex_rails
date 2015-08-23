@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'my_first_page#index'
+
+  resources :goods
+
   get 'times' => 'times#index'
 
   # Example of regular route:

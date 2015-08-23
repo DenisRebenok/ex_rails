@@ -1,7 +1,7 @@
 class GoodsController < ApplicationController
   def index
     @goods_count = Good.count
-    @goods = Good.all
+    @goods = Good.all.order(:code)
   end
   def show
     @good = Good.find(params[:id])

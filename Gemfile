@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
-# Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
-gem 'pg'
-# Use SCSS for stylesheets
+
+gem 'bootstrap-sass'
 gem 'sass-rails', '~> 5.0'
+
+gem 'autoprefixer-rails'
+
+gem 'pg'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -48,5 +48,9 @@ group :development, :test do
   gem 'rubocop', require: false
 
   gem 'rails-erd', require: false
+end
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
 end
 

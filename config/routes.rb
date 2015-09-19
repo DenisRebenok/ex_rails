@@ -3,11 +3,13 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'my_first_page#index'
 
   resources :goods
 
-  get 'times' => 'times#index'
+  scope '(:locale)', locale: /en|ru/ do
+    resources :times
+    root 'home#index'
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -5,4 +5,7 @@ class TimesController < ApplicationController
       format.js {}
     end    
   end
+  def show
+    
+  end
 end
